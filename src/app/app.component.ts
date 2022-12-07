@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-dream-app';
+  disabled=false;
+  name = 'my-dream-app';
+
+  onUpdateName(data:Event){
+    console.log(data);
+   this.name=(<HTMLInputElement>event?.target).value;
+  }
 }
